@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function Home(){
-echo"test home";
-    }      
+    public function Home()
+    {
+        return view("Clients.homepage");
+    }
 }
