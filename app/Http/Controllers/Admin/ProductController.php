@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
+
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Hiển thị danh sách sản phẩm
      */
     public function index()
     {
@@ -18,15 +20,21 @@ class ProductController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Hiển thị form thêm sản phẩm
      */
     public function create()
     {
-        //
+        DB::table('product')->insert([
+            'name' => 'Bàn Phím cơ an',
+            'description' => 'kayla@example.com',
+            'image' => 'kayla@example.com',
+            'price' => 100000,
+        ]);
     }
-
+    
+    
     /**
-     * Store a newly created resource in storage.
+     * Thực Hiện lưu sản phẩm sau khi submit form
      */
     public function store(Request $request)
     {
@@ -34,7 +42,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Xem Chi Tiết 1 sản phẩm theo id
      */
     public function show(string $id)
     {
@@ -42,7 +50,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Hiển thị form sửa sản phẩm theo id
      */
     public function edit(string $id)
     {
@@ -50,7 +58,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Cập nhật sản phẩm sau khi sửa theo id
      */
     public function update(Request $request, string $id)
     {
@@ -58,7 +66,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Xóa sản phẩm
      */
     public function destroy(string $id)
     {
