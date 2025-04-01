@@ -16,3 +16,5 @@ Route::prefix('admin')->group(function(){
 // Route dành cho client
 Route::get('product', action: [ClientProductController::class, 'index']);
 Route::get('product/{id}', [ClientProductController::class, 'show']);
+Route::get('/', [ClientHomeController::class, 'home']);
+
