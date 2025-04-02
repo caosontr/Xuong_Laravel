@@ -14,9 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $akll_product = Product::all();
+        $all_product = Product::all();
         echo"<pre>";
-        print_r($akll_product);
+        print_r($all_product);
     }
 
     /**
@@ -24,7 +24,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        DB::table('product')->insert([
+        DB::table('products')->insert([
             'name' => 'Bàn Phím cơ an',
             'description' => 'kayla@example.com',
             'image' => 'kayla@example.com',
