@@ -24,12 +24,12 @@ class ProductController extends Controller
      */
     public function create()
     {
-        DB::table('products')->insert([
-            'name' => 'Bàn Phím cơ an',
-            'description' => 'kayla@example.com',
-            'image' => 'kayla@example.com',
-            'price' => 100000,
-        ]);
+        // DB::table('products')->insert([
+        //     'name' => 'Bàn Phím cơ an',
+        //     'description' => 'kayla@example.com',
+        //     'image' => 'kayla@example.com',
+        //     'price' => 100000,
+        // ]);
     }
     
     
